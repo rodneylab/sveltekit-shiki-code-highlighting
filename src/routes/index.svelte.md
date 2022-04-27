@@ -1,7 +1,7 @@
 ## Rust
 
 ```rust
-println("Made it here!");
+println!("Made it here!");
 ```
 
 ## JavaScript

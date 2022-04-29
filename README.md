@@ -21,7 +21,7 @@ If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
 git clone https://github.com/rodneylab/sveltekit-shiki-code-highlighting.git
-cd svelte-each
+cd sveltekit-shiki-code-highlighting
 pnpm install # or npm install
 pnpm run dev
 ```

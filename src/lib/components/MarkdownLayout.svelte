@@ -1,6 +1,6 @@
 <script>
   import '$lib/styles/styles.css';
-  import '@fontsource/ibm-plex-mono';
+  import '@fontsource/ibm-plex-mono/latin.css';
 </script>
 
 <svelte:head>

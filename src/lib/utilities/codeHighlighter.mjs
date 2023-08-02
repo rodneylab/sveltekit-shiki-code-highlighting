@@ -11,8 +11,7 @@ const THEME = 'github-dark';
 function escapeHtml(code) {
   return code.replace(
     /[{}`]/g,
-    // (character) => ({ '{': '&#123;', '}': '&#125;', '`': '&#96;' }[character]),
-    (character) => ({ '{': '&lbrace;', '}': '&rbrace;', '`': '&grave;' }[character]),
+    (character) => ({ '{': '&lbrace;', '}': '&rbrace;', '`': '&grave;' })[character],
   );
 }
 

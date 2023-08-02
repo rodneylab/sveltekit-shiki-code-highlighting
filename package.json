@@ -11,34 +11,34 @@
     "check": "svelte-check --tsconfig ./jsconfig.json",
     "check:watch": "svelte-check --tsconfig ./jsconfig.json --watch",
     "test": "playwright test",
-    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "lint": "prettier --ignore-path .gitignore --check --plugin=prettier-plugin-svelte . && eslint --ignore-path .gitignore .",
     "lint:css": "stylelint \"src/**/*.{css,svelte}\"",
-    "prettier:check": "prettier --check --plugin-search-dir=. .",
-    "format": "prettier --ignore-path .prettierignore --write --plugin-search-dir=. ."
+    "prettier:check": "prettier --check --plugin=prettier-plugin-svelte .",
+    "format": "prettier --ignore-path .prettierignore --write --plugin=prettier-plugin-svelte ."
   },
   "devDependencies": {
-    "@fontsource/ibm-plex-mono": "^4.5.13",
-    "@playwright/test": "^1.32.1",
-    "@sveltejs/adapter-auto": "^2.0.0",
-    "@sveltejs/kit": "^1.15.0",
-    "eslint": "^8.37.0",
-    "eslint-config-prettier": "^8.8.0",
+    "@fontsource/ibm-plex-mono": "^5.0.5",
+    "@playwright/test": "^1.36.2",
+    "@sveltejs/adapter-auto": "^2.1.0",
+    "@sveltejs/kit": "^1.22.4",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.9.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "husky": "^8.0.3",
-    "mdsvex": "^0.10.6",
+    "mdsvex": "^0.11.0",
     "node-html-parser": "^6.1.5",
     "postcss-html": "^1.5.0",
-    "prettier": "^2.8.7",
-    "prettier-plugin-svelte": "^2.10.0",
-    "shiki": "^0.14.1",
-    "stylelint": "^15.4.0",
-    "stylelint-config-recommended": "^11.0.0",
-    "stylelint-config-standard": "^32.0.0",
-    "svelte": "^3.58.0",
-    "svelte-check": "^3.1.4",
-    "svelte-preprocess": "^5.0.3",
-    "typescript": "~5.0.3",
-    "vite": "^4.2.1"
+    "prettier": "^3.0.0",
+    "prettier-plugin-svelte": "^3.0.3",
+    "shiki": "^0.14.3",
+    "stylelint": "^15.10.2",
+    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "svelte": "^4.1.2",
+    "svelte-check": "^3.4.6",
+    "svelte-preprocess": "^5.0.4",
+    "typescript": "~5.1.6",
+    "vite": "^4.4.8"
   },
   "type": "module",
   "repository": {
@@ -47,8 +47,5 @@
   },
   "bugs": {
     "url": "https://github.com/rodneylab/sveltekit-shiki-code-highlighting/issues"
-  },
-  "peerDependencies": {
-    "vite": "^3.0.4"
   }
 }

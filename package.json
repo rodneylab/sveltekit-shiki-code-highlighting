@@ -5,6 +5,7 @@
   "description": "SvelteKit Shiki syntax highlighting: use any VSCode colour theme to accessibly syntax highlight code on your SvelteKit app with line numbers.",
   "scripts": {
     "dev": "vite dev",
+    "start": "vite dev",
     "build": "vite build",
     "package": "svelte-kit package",
     "preview": "vite preview",

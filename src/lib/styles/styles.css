@@ -33,7 +33,7 @@ code {
   max-width: var(--max-width-full);
 }
 
-.highlight-line {
+.highlighted {
   display: inline-block;
   background-color: var(--colour-code-background-highlighted);
   width: calc(var(--max-width-full) + var(--spacing-4));

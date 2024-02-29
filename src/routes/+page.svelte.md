@@ -12,7 +12,7 @@ console.log('Made it here!');
 
 ## Svelte
 
-```svelte {5-7,10-11}
+```svelte {4,5,7-10}
 <script context="module" lang="ts">
   export const prerender = true;
 </script>

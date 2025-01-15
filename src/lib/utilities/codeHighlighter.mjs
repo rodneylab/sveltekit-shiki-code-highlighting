@@ -1,6 +1,6 @@
 import { transformerMetaHighlight } from '@shikijs/transformers';
 import { parse } from 'node-html-parser';
-import { codeToHtml, getHighlighter } from 'shiki';
+import { codeToHtml, createHighlighter } from 'shiki';
 
 const THEME = 'github-dark';
 
@@ -10,10 +10,10 @@ const THEME = 'github-dark';
  * @returns {string} - escaped HTML
  */
 function escapeHtml(code) {
-  return code.replace(
-    /[{}`]/g,
-    (character) => ({ '{': '&lbrace;', '}': '&rbrace;', '`': '&grave;' })[character],
-  );
+	return code.replace(
+		/[{}`]/g,
+		(character) => ({ '{': '&lbrace;', '}': '&rbrace;', '`': '&grave;' })[character],
+	);
 }
 
 /**
@@ -21,9 +21,9 @@ function escapeHtml(code) {
  * @returns {string} - highlighted html
  */
 function makeFocussable(html) {
-  const root = parse(html);
-  // root.querySelector('pre').setAttribute('tabIndex', '0');
-  return root.toString();
+	const root = parse(html);
+	// root.querySelector('pre').setAttribute('tabIndex', '0');
+	return root.toString();
 }
 
 /**
@@ -33,28 +33,28 @@ function makeFocussable(html) {
  * @returns {string} - highlighted html
  */
 async function highlighter(code, lang, meta) {
-  await getHighlighter({
-    langs: ['rust'],
-    themes: [THEME],
-  });
+	await createHighlighter({
+		langs: [lang],
+		themes: [THEME],
+	});
 
-  let html;
-  if (!meta) {
-    html = await codeToHtml(code, {
-      lang,
-      theme: THEME,
-    });
-  } else {
-    html = await codeToHtml(code, {
-      lang,
-      theme: THEME,
-      meta: { __raw: meta },
-      transformers: [transformerMetaHighlight()],
-    });
-  }
+	let html;
+	if (!meta) {
+		html = await codeToHtml(code, {
+			lang,
+			theme: THEME,
+		});
+	} else {
+		html = await codeToHtml(code, {
+			lang,
+			theme: THEME,
+			meta: { __raw: meta },
+			transformers: [transformerMetaHighlight()],
+		});
+	}
 
-  html = makeFocussable(html);
-  return escapeHtml(html);
+	html = makeFocussable(html);
+	return escapeHtml(html);
 }
 
 export default highlighter;

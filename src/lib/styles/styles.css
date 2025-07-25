@@ -81,7 +81,8 @@ code {
 
 	/* CREDIT: https://www.joshwcomeau.com/shadow-palette/ */
 	--shadow-color: 194deg 84% 18%;
-	--shadow-elevation-medium: -1px 1px 1.6px hsl(var(--shadow-color) / 0.36),
+	--shadow-elevation-medium:
+		-1px 1px 1.6px hsl(var(--shadow-color) / 0.36),
 		-3.3px 3.3px 5.3px -0.8px hsl(var(--shadow-color) / 0.36),
 		-8.2px 8.2px 13px -1.7px hsl(var(--shadow-color) / 0.36),
 		-20px 20px 31.8px -2.5px hsl(var(--shadow-color) / 0.36);
